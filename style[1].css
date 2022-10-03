@@ -1,0 +1,126 @@
+header,
+nav,
+article,
+footer {
+	display: block;
+	/**makes all elements be a block**/
+}
+
+html {
+	text-align: left;
+	width: 90vw;
+	margin: 0 auto 0 auto;
+}
+
+header {
+	padding: 2vw;  
+	box-sizing: border-box;
+	text-align: center;
+	background-size: cover;
+	overflow: auto;
+}
+
+header h1 {
+	color: #000;
+	font-size: 2em;
+}
+
+nav {
+	font-size: 1em;
+}
+
+body {
+	background-size: 700vw;
+	margin: 0;
+	float: center;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 1em;
+}
+
+.grid-container {
+	display: grid;
+	grid-gap: 15px;
+	padding: 10px;
+  	grid-template-areas:
+	'header header header header header header'
+	'menu menu menu menu menu menu'
+	'intro intro intro intro intro intro'
+	'main main main main sidebar sidebar'
+	'footer footer footer footer footer footer';
+	grid-auto-rows: minmax(1fr, auto);
+	grid-template-columns: minmax(2fr, auto);
+}
+
+.item1 { 
+	grid-column: header; 
+	padding: 10px;
+}
+.item2 { 
+	grid-column: menu; 
+}
+
+.item3 {
+	background: #dbdbdb;
+	grid-area: intro;
+	justify-self: center;
+	grid-row: 1vw;
+	padding: 20px;
+}
+
+.item4 {
+	grid-area: main;
+	background: #dbdbdb;
+	padding: 20px;
+}
+
+.item5 {
+	grid-area: sidebar;
+	background: #dbdbdb;
+	padding: 20px;
+}
+
+.item6 { 
+	grid-area: footer; 
+}
+
+.grid-container > div {
+  text-align: center;
+  background-color: none;
+}
+
+ul {
+ 	list-style-type: none;
+ 	margin: 0;
+ 	padding: 0;
+ 	overflow: hidden;
+ 	background-color: #333;
+}
+
+li {
+ 	float: left;
+}
+
+li a {
+ 	display: block;
+ 	color: white;
+ 	text-align: center;
+ 	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+footer {
+	background-color: #333;
+	padding: 8px;
+    text-align: center;
+	height: auto;
+}
+footer p {
+	color: #fff;
+	font-size: 1em;
+}
